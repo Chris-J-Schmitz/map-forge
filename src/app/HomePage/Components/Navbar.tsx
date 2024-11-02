@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
+import { ClerkProvider, SignedIn, SignedOut, SignInButton, SignOutButton } from "@clerk/nextjs";
 import Link from "next/link";
+
+console.log("Clerk Publishable Key:", process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY);
 
 export function Navbar() {
     return (
@@ -16,7 +18,7 @@ export function Navbar() {
                 
                 
                 {/* Navigation Links */}
-                <div className="flex items-center gap-8">
+                <div className="flex items-center gap-6">
                     <Link href="#features" className="text-xl" aria-label="Features">
                         Features
                     </Link>
@@ -25,18 +27,25 @@ export function Navbar() {
                     </Link>
                     
                     {/* Account Links */}
-                    <div className="ml-4">
-                        {/* <SignedIn>
-                            <Link href="/MyMaps" className="text-lg" aria-label="My Maps">
-                                My Maps
-                            </Link>
-                        </SignedIn>
-                        <SignedOut>
-                            <SignInButton>
-                                <button className="text-lg" aria-label="Login">Login</button>
-                            </SignInButton>
-                        </SignedOut> */}
-                        <Button className="font-semibold">Login</Button>
+                    <div className="">
+                        <ClerkProvider>
+                            <SignedIn >
+                                <div className="flex gap-6 text-xl text-center justify-center items-center">
+                                    <Link href="/AccountPage/MyMaps" className="" aria-label="My Maps">
+                                        My Maps
+                                    </Link>
+                                    <SignOutButton>
+                                        <Button className="font-semibold text-sm">Log Out</Button>
+                                    </SignOutButton>
+                                </div>
+                                
+                            </SignedIn>
+                            <SignedOut>
+                                <SignInButton>
+                                    <Button className="font-semibold text-md">Log in</Button>
+                                </SignInButton>
+                            </SignedOut>
+                        </ClerkProvider>
                     </div>
                 </div>
             </nav>
