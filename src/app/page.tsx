@@ -1,4 +1,5 @@
 import { Navbar } from "./HomePage/Components/Navbar";
+import { ClerkProvider } from "@clerk/nextjs";
 // import HeroSection from "./HomePage/Components/HeroSection";
 // import FeaturesSection from "./HomePage/Components/FeaturesSection";
 // import PricingSection from "./HomePage/Components/PricingSection";

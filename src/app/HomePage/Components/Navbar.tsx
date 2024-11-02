@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { SignedIn, SignedOut, SignInButton } from "@clerk/nextjs";
 import Link from "next/link";
 
@@ -6,11 +7,13 @@ export function Navbar() {
         <header className="flex py-6 shadow-xl fixed top-0 w-full z-10 bg-background/95">
             <nav className="flex items-center justify-between container mx-auto px-6 font-semibold">
                 {/* Logo Section */}
-                <div className="ml-10">
-                    <Link href="#" aria-label="Map Forge Home" className="text-2xl font-bold">
-                        Map Forge
-                    </Link>
-                </div>
+                <Link href="#">
+                    <div className="ml-10 flex gap-2 " >
+                        <img src="/icon.png" alt="Map Forge Icon" className="h-8 w-auto" />
+                        <span className="text-center justify-center flex items-center text-2xl">Map Forge</span>
+                    </div>
+                </Link>
+                
                 
                 {/* Navigation Links */}
                 <div className="flex items-center gap-8">
@@ -23,7 +26,7 @@ export function Navbar() {
                     
                     {/* Account Links */}
                     <div className="ml-4">
-                        <SignedIn>
+                        {/* <SignedIn>
                             <Link href="/MyMaps" className="text-lg" aria-label="My Maps">
                                 My Maps
                             </Link>
@@ -32,7 +35,8 @@ export function Navbar() {
                             <SignInButton>
                                 <button className="text-lg" aria-label="Login">Login</button>
                             </SignInButton>
-                        </SignedOut>
+                        </SignedOut> */}
+                        <Button className="font-semibold">Login</Button>
                     </div>
                 </div>
             </nav>
