@@ -6,7 +6,7 @@ console.log("Clerk Publishable Key:", process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_
 
 export function Navbar() {
     return (
-        <header className="flex py-6 shadow-xl fixed top-0 w-full z-10 bg-background/95">
+        <header className="flex py-6 shadow-xl top-0 w-full z-10 bg-background/95 sticky">
             <nav className="flex items-center justify-between container mx-auto px-6 font-semibold">
                 {/* Logo Section */}
                 <Link href="#">
@@ -35,14 +35,14 @@ export function Navbar() {
                                         My Maps
                                     </Link>
                                     <SignOutButton>
-                                        <Button className="font-semibold text-sm">Log Out</Button>
+                                            <Button className="font-semibold text-sm hover:bg-[#b88917] hover:text-black">Log Out</Button>
                                     </SignOutButton>
                                 </div>
                                 
                             </SignedIn>
                             <SignedOut>
                                 <SignInButton>
-                                    <Button className="font-semibold text-md">Log in</Button>
+                                        <Button className="font-semibold text-md hover:bg-[#b88917] hover:text-black">Log in</Button>
                                 </SignInButton>
                             </SignedOut>
                         </ClerkProvider>

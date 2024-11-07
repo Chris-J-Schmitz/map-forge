@@ -1,5 +1,4 @@
 import { clerkMiddleware } from "@clerk/nextjs/server";
-console.log("Clerk Publishable Key:", process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY);
 
 
 export default clerkMiddleware();

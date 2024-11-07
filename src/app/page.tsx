@@ -1,6 +1,6 @@
 import { Navbar } from "./HomePage/Components/Navbar";
 import { ClerkProvider } from "@clerk/nextjs";
-// import HeroSection from "./HomePage/Components/HeroSection";
+import {HeroSection} from "./HomePage/Components/HeroSection";
 // import FeaturesSection from "./HomePage/Components/FeaturesSection";
 // import PricingSection from "./HomePage/Components/PricingSection";
 
@@ -8,12 +8,13 @@ import { ClerkProvider } from "@clerk/nextjs";
 export default function Home() {
   return (
     <div>
-      <section className="py-4 flex ">
+      <section className="">
         <Navbar />
       </section>
 
       <main>
-        {/* <HeroSection />
+        <HeroSection />
+        {/* 
         <FeaturesSection />
         <PricingSection /> */}
       </main>
