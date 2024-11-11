@@ -1,8 +1,8 @@
 import { Navbar } from "./HomePage/Components/Navbar";
 import { ClerkProvider } from "@clerk/nextjs";
 import {HeroSection} from "./HomePage/Components/HeroSection";
-// import FeaturesSection from "./HomePage/Components/FeaturesSection";
-// import PricingSection from "./HomePage/Components/PricingSection";
+import {FeaturesSection} from "./HomePage/Components/FeaturesSection";
+import {PricingSection} from "./HomePage/Components/PricingSection";
 
 
 export default function Home() {
@@ -14,9 +14,8 @@ export default function Home() {
 
       <main>
         <HeroSection />
-        {/* 
         <FeaturesSection />
-        <PricingSection /> */}
+        <PricingSection />
       </main>
     </div>
   );
