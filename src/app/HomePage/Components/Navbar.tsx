@@ -31,7 +31,7 @@ export function Navbar() {
                         <ClerkProvider>
                             <SignedIn >
                                 <div className="flex gap-6 text-xl text-center justify-center items-center">
-                                    <Link href="/AccountPage/MyMaps" className="" aria-label="My Maps">
+                                    <Link href="#" className="" aria-label="My Maps">
                                         My Maps
                                     </Link>
                                     <SignOutButton>
