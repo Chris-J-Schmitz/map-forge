@@ -1,8 +1,9 @@
+import { FeaturesSection } from "./HomePage/Components/FeaturesSection";
+import { Footer } from "./HomePage/Components/Footer";
+import { HeroSection } from "./HomePage/Components/HeroSection";
 import { Navbar } from "./HomePage/Components/Navbar";
-import { ClerkProvider } from "@clerk/nextjs";
-import {HeroSection} from "./HomePage/Components/HeroSection";
-import {FeaturesSection} from "./HomePage/Components/FeaturesSection";
-import {PricingSection} from "./HomePage/Components/PricingSection";
+import { PricingSection } from "./HomePage/Components/PricingSection";
+
 
 
 export default function Home() {
@@ -17,6 +18,9 @@ export default function Home() {
         <FeaturesSection />
         <PricingSection />
       </main>
+      <footer>
+        <Footer />
+      </footer>
     </div>
   );
 }

@@ -6,7 +6,7 @@ console.log("Clerk Publishable Key:", process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_
 
 export function Navbar() {
     return (
-        <header className="flex py-6 shadow-xl top-0 w-full z-10 bg-background/95 sticky">
+        <header className="flex py-6 shadow-xl top-0 w-full z-10 bg-background/90 fixed">
             <nav className="flex items-center justify-between container mx-auto px-6 font-semibold">
                 {/* Logo Section */}
                 <Link href="#">
