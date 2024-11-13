@@ -5,8 +5,9 @@
 - [ ] Fix navbar responsiveness on mobile
 
 ## Medium Priority
-- [ ] Create pricing page layout
+- [X] Create pricing page layout
 - [ ] Write tests for form validation
+- [ ] Create a few maps to display on landing page
 
 ## Low Priority
 - [ ] Optimize image loading on homepage

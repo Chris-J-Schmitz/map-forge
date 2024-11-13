@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ClerkProvider, SignedIn, SignedOut, SignInButton, SignOutButton } from "@clerk/nextjs";
 import Link from "next/link";
 
-console.log("Clerk Publishable Key:", process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY);
+
 
 export function Navbar() {
     return (
