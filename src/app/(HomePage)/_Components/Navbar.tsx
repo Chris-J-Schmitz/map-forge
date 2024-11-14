@@ -1,3 +1,4 @@
+import { BrandLogo } from "@/components/BrandLogo";
 import { Button } from "@/components/ui/button";
 import { ClerkProvider, SignedIn, SignedOut, SignInButton, SignOutButton } from "@clerk/nextjs";
 import Link from "next/link";
@@ -9,11 +10,8 @@ export function Navbar() {
         <header className="flex py-6 shadow-xl top-0 w-full z-10 bg-background/90 fixed">
             <nav className="flex items-center justify-between container mx-auto px-6 font-semibold">
                 {/* Logo Section */}
-                <Link href="#">
-                    <div className="ml-10 flex gap-2 " >
-                        <img src="/icon.png" alt="Map Forge Icon" className="h-8 w-auto" />
-                        <span className="text-center justify-center flex items-center text-2xl">Map Forge</span>
-                    </div>
+                <Link href="/">
+                    <BrandLogo />
                 </Link>
                 
                 
