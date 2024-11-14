@@ -1,6 +1,7 @@
 import { Card, CardHeader, CardTitle, CardContent, CardFooter} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import plans from "@/app/data/plans.json";
+import { CheckIcon } from "lucide-react";
 
 export function PricingSection() {
     return (
@@ -11,16 +12,22 @@ export function PricingSection() {
                     {plans.map((plan) => (
                         <Card key={plan.id} className="shadow-lg">
                             <CardHeader>
-                                <CardTitle className="text-3xl font-semibold mb-2">{plan.name}</CardTitle>
-                                <p className="text-lg text-gray-600">
+                            <CardTitle 
+                                className={`text-3xl font-semibold mb-2 ${
+                                    plan.id === "premium" ? "text-[#b88917]" : ""
+                                }`}
+                                 >
+                                {plan.name}
+                            </CardTitle>
+                                <p className="text-lg font-bold text-black">
                                     ${plan.price} / {plan.frequency}
                                 </p>
                             </CardHeader>
                             <CardContent className="min-h-48">
                                 <ul className="mb-6 text-left space-y-2">
                                     {plan.features.map((feature, index) => (
-                                        <li key={index} className="flex items-center space-x-2">
-                                            <span>✅</span>
+                                        <li key={index} className="flex items-center space-x-2 ">
+                                            <CheckIcon className="size-5 stroke-accent bg-[#a07815]/60 rounded-full p-0.5 " />
                                             <span>{feature}</span>
                                         </li>
                                     ))}
