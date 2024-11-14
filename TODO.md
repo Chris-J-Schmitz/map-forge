@@ -8,10 +8,13 @@
 - [X] Create pricing page layout
 - [ ] Write tests for form validation
 - [ ] Create a few maps to display on landing page
+- [ ] Create the Generate Page
 
 ## Low Priority
 - [ ] Optimize image loading on homepage
 - [ ] Add social media icons to footer
+- [ ] Fix user auth routing
+
 
 ---
 

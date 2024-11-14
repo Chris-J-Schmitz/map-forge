@@ -5,10 +5,12 @@ import { useRouter } from "next/navigation";
 
 
 export function HeroSection() {
+
+    
     const router = useRouter();
 
     const handleClick = () => {
-        router.push("src\app\GeneratePage\GeneratePage.tsx")
+        router.push("/GeneratePage")
     }
     return (
         <div
@@ -20,6 +22,7 @@ export function HeroSection() {
             <h1 className="text-7xl font-bold mb-4">Forge Your Own Maps</h1>
             <p className="text-2xl mb-8">Quickly generate and customize maps for your tabletop adventures.</p>
             <Button 
+            //Routes to the generate page
             onClick={handleClick}
             className="px-12 py-6 text-xl  text-white font-semibold rounded hover:bg-neutral-700  transition">
                 Get Started for Free
