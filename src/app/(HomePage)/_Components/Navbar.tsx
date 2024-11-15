@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export function Navbar() {
     return (
-        <header className="flex py-6 shadow-xl top-0 w-full z-10 bg-background/90 fixed">
+        <header className="flex py-6 shadow-xl top-0 w-full z-10 bg-background/90  sticky">
             <nav className="flex items-center justify-between container mx-auto px-6 font-semibold">
                 {/* Logo Section */}
                 <Link href="/">
