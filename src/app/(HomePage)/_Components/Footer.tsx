@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export function Footer() {
     return (
-        <section className="flex justify-between items-center bg-slate-800 text-slate-300">
+        <section className="flex justify-between items-center bg-slate-900 text-slate-300">
             <Link href="/">
                     <BrandLogo />
                 </Link>

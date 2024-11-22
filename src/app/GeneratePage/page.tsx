@@ -1,8 +1,9 @@
+import { Button } from "@/components/ui/button";
 import { NavBar } from "./Components/NavBar";
 
 export default function GeneratePage() {
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen ">
             {/* Navbar */}
             <nav className="sticky top-0 z-50">
                 <NavBar />
@@ -10,20 +11,9 @@ export default function GeneratePage() {
 
             {/* Main Content */}
             <main className="flex flex-col items-center justify-center flex-grow p-6">
-                <form className="space-y-6 max-w-lg w-full">
+                <form className="space-y-6 max-w-lg w-full ">
                     {/* Map Details */}
-                    <div>
-                        <label htmlFor="mapName" className="block text-sm font-medium mb-2">
-                            Map Name
-                        </label>
-                        <input
-                            type="text"
-                            id="mapName"
-                            placeholder="Enter map name"
-                            className="input w-full p-2 border border-gray-300 rounded"
-                        />
-                    </div>
-
+                    
                     <div>
                         <label htmlFor="mapSize" className="block text-sm font-medium mb-2">
                             Map Size
@@ -33,6 +23,7 @@ export default function GeneratePage() {
                             <option>Medium</option>
                             <option>Large</option>
                         </select>
+                        <span className="text-xs pl-2">small: 50x50, medium: 75x75, large: 100x100</span>
                     </div>
 
                     <div>
@@ -41,9 +32,10 @@ export default function GeneratePage() {
                         </label>
                         <select id="theme" className="dropdown w-full p-2 border border-gray-300 rounded">
                             <option>Forest</option>
-                            <option>Dungeon</option>
-                            <option>Desert</option>
+                            <option>Cave</option>
+                            <option>Town</option>
                         </select>
+                        <span className="text-xs pl-2">Only cave works for now</span>
                     </div>
 
                     {/* Randomization */}
@@ -52,27 +44,13 @@ export default function GeneratePage() {
                             Randomization Level
                         </label>
                         <input type="range" id="randomization" className="slider w-full" />
-                    </div>
-
-                    {/* Export Settings */}
-                    <div>
-                        <label htmlFor="exportFormat" className="block text-sm font-medium mb-2">
-                            File Format
-                        </label>
-                        <select id="exportFormat" className="dropdown w-full p-2 border border-gray-300 rounded">
-                            <option>PNG</option>
-                            <option>JPG</option>
-                            <option>PDF</option>
-                        </select>
+                        <span className="text-xs pl-2">Does nothing for right now</span>
                     </div>
 
                     {/* Generate Button */}
-                    <button
-                        type="submit"
-                        className="btn-primary w-full py-2 px-4 bg-blue-600 text-white rounded hover:bg-blue-700"
-                    >
+                    <Button className="w-full">
                         Generate Map
-                    </button>
+                    </Button>
                 </form>
             </main>
         </div>
