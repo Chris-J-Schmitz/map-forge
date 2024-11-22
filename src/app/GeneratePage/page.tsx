@@ -3,7 +3,7 @@ import { NavBar } from "./Components/NavBar";
 
 export default function GeneratePage() {
     return (
-        <div className="flex flex-col min-h-screen ">
+        <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white">
             {/* Navbar */}
             <nav className="sticky top-0 z-50">
                 <NavBar />
@@ -11,47 +11,68 @@ export default function GeneratePage() {
 
             {/* Main Content */}
             <main className="flex flex-col items-center justify-center flex-grow p-6">
-                <form className="space-y-6 max-w-lg w-full ">
-                    {/* Map Details */}
-                    
-                    <div>
-                        <label htmlFor="mapSize" className="block text-sm font-medium mb-2">
-                            Map Size
-                        </label>
-                        <select id="mapSize" className="dropdown w-full p-2 border border-gray-300 rounded">
-                            <option>Small</option>
-                            <option>Medium</option>
-                            <option>Large</option>
-                        </select>
-                        <span className="text-xs pl-2">small: 50x50, medium: 75x75, large: 100x100</span>
-                    </div>
+                <div className="bg-gray-700 bg-opacity-90 shadow-lg rounded-lg p-8 max-w-lg w-full space-y-6">
+                    <h2 className="text-2xl font-bold text-center mb-4">
+                        Generate Your Map
+                    </h2>
+                    <form className="space-y-6">
+                        {/* Map Size */}
+                        <div>
+                            <label htmlFor="mapSize" className="block text-sm font-medium mb-2">
+                                Map Size
+                            </label>
+                            <select
+                                id="mapSize"
+                                className="w-full p-3 border border-gray-700 rounded bg-gray-900 text-white focus:ring-2 focus:ring-yellow-500 focus:outline-none transition"
+                            >
+                                <option>Small</option>
+                                <option>Medium</option>
+                                <option>Large</option>
+                            </select>
+                            <span className="text-xs text-gray-400">
+                                Small: 50x50, Medium: 75x75, Large: 100x100
+                            </span>
+                        </div>
 
-                    <div>
-                        <label htmlFor="theme" className="block text-sm font-medium mb-2">
-                            Theme
-                        </label>
-                        <select id="theme" className="dropdown w-full p-2 border border-gray-300 rounded">
-                            <option>Forest</option>
-                            <option>Cave</option>
-                            <option>Town</option>
-                        </select>
-                        <span className="text-xs pl-2">Only cave works for now</span>
-                    </div>
+                        {/* Theme */}
+                        <div>
+                            <label htmlFor="theme" className="block text-sm font-medium mb-2">
+                                Theme
+                            </label>
+                            <select
+                                id="theme"
+                                className="w-full p-3 border border-gray-700 rounded bg-gray-900 text-white focus:ring-2 focus:ring-yellow-500 focus:outline-none transition"
+                            >
+                                <option>Forest</option>
+                                <option>Cave</option>
+                                <option>Town</option>
+                            </select>
+                            <span className="text-xs text-gray-400">
+                                Only Cave works for now
+                            </span>
+                        </div>
 
-                    {/* Randomization */}
-                    <div>
-                        <label htmlFor="randomization" className="block text-sm font-medium mb-2">
-                            Randomization Level
-                        </label>
-                        <input type="range" id="randomization" className="slider w-full" />
-                        <span className="text-xs pl-2">Does nothing for right now</span>
-                    </div>
+                        {/* Randomization Level */}
+                        <div>
+                            <label htmlFor="randomization" className="block text-sm font-medium mb-2">
+                                Randomization Level
+                            </label>
+                            <input
+                                type="range"
+                                id="randomization"
+                                className="w-full slider bg-gray-700 appearance-none h-2 rounded-lg focus:ring-2 focus:ring-yellow-500 transition"
+                            />
+                            <span className="text-xs text-gray-400">
+                                Does nothing for right now
+                            </span>
+                        </div>
 
-                    {/* Generate Button */}
-                    <Button className="w-full">
-                        Generate Map
-                    </Button>
-                </form>
+                        {/* Generate Button */}
+                        <Button className="w-full bg-yellow-500 hover:bg-yellow-400 text-gray-900 font-semibold py-3 rounded-lg shadow-md transition">
+                            Generate Map
+                        </Button>
+                    </form>
+                </div>
             </main>
         </div>
     );
