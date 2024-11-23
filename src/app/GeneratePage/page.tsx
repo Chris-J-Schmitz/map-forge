@@ -1,7 +1,19 @@
+'use client'
 import { Button } from "@/components/ui/button";
 import { NavBar } from "./Components/NavBar";
+import { useState } from "react";
 
 export default function GeneratePage() {
+
+    const [mapSize, setMapSize] = useState('')
+    const [mapStyle, setMapStyle] = useState('')
+
+
+    const handleSubmit = (event:any) =>{
+        event.preventDefault() // prevent default submitssion
+        console.log('Submitted:', {mapSize, mapStyle})
+    }
+
     return (
         <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white">
             {/* Navbar */}
@@ -11,18 +23,23 @@ export default function GeneratePage() {
 
             {/* Main Content */}
             <main className="flex flex-col items-center justify-center flex-grow p-6">
-                <div className="bg-gray-700 bg-opacity-90 shadow-lg rounded-lg p-8 max-w-lg w-full space-y-6">
+                <div className="bg-gradient-to-br from-gray-500 to-gray-700 bg-opacity-90 shadow-lg rounded-lg p-8 max-w-lg w-full space-y-6">
                     <h2 className="text-2xl font-bold text-center mb-4">
                         Generate Your Map
                     </h2>
-                    <form className="space-y-6">
+                    <form 
+                        className="space-y-6"
+                        onSubmit={handleSubmit}
+                    >
                         {/* Map Size */}
                         <div>
-                            <label htmlFor="mapSize" className="block text-sm font-medium mb-2">
+                            <label htmlFor="mapSize"  className="block text-md font-semibold mb-2">
                                 Map Size
                             </label>
                             <select
                                 id="mapSize"
+                                value={mapSize}
+                                onChange={(e) => setMapSize(e.target.value)}
                                 className="w-full p-3 border border-gray-700 rounded bg-gray-900 text-white focus:ring-2 focus:ring-yellow-500 focus:outline-none transition"
                             >
                                 <option>Small</option>
@@ -36,11 +53,13 @@ export default function GeneratePage() {
 
                         {/* Theme */}
                         <div>
-                            <label htmlFor="theme" className="block text-sm font-medium mb-2">
+                            <label htmlFor="theme" className="block text-md font-semibold mb-2">
                                 Theme
                             </label>
                             <select
                                 id="theme"
+                                value={mapStyle}
+                                onChange={(e) => setMapStyle(e.target.value)}
                                 className="w-full p-3 border border-gray-700 rounded bg-gray-900 text-white focus:ring-2 focus:ring-yellow-500 focus:outline-none transition"
                             >
                                 <option>Forest</option>
@@ -54,7 +73,7 @@ export default function GeneratePage() {
 
                         {/* Randomization Level */}
                         <div>
-                            <label htmlFor="randomization" className="block text-sm font-medium mb-2">
+                            <label htmlFor="randomization" className="block text-md font-semibold mb-2">
                                 Randomization Level
                             </label>
                             <input
