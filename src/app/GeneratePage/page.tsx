@@ -7,12 +7,15 @@ export default function GeneratePage() {
 
     const [mapSize, setMapSize] = useState('')
     const [mapStyle, setMapStyle] = useState('')
+    const [random, setRandom] = useState('')
 
 
     const handleSubmit = (event:any) =>{
         event.preventDefault() // prevent default submitssion
-        console.log('Submitted:', {mapSize, mapStyle})
+        console.log('Submitted:', {mapSize, mapStyle, random})
     }
+
+    
 
     return (
         <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white">
@@ -78,6 +81,10 @@ export default function GeneratePage() {
                             </label>
                             <input
                                 type="range"
+                                min='0'
+                                max='100'
+                                step='1'
+                                onChange={(e) => setRandom(e.target.value)}
                                 id="randomization"
                                 className="w-full slider bg-gray-700 appearance-none h-2 rounded-lg focus:ring-2 focus:ring-yellow-500 transition"
                             />
