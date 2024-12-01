@@ -8,7 +8,8 @@
 - [X] Create pricing page layout
 - [ ] Write tests for form validation
 - [ ] Create a few maps to display on landing page
-- [ ] Create the Generate Page
+- [X] Create the Generate Page
+- [ ] Connect form from generate page to the photo generating API
 
 ## Low Priority
 - [ ] Optimize image loading on homepage

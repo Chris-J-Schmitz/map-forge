@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { NavBar } from "./Components/NavBar";
 import { useState } from "react";
+import { Footer } from "./Components/Footer";
 
 export default function GeneratePage() {
 
@@ -15,10 +16,11 @@ export default function GeneratePage() {
         console.log('Submitted:', {mapSize, mapStyle, random})
     }
 
-    
+    //Optional background for page
+    //bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700
 
     return (
-        <div className="flex flex-col min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white">
+        <div className="flex flex-col min-h-screen  text-white">
             {/* Navbar */}
             <nav className="sticky top-0 z-50">
                 <NavBar />
@@ -26,7 +28,7 @@ export default function GeneratePage() {
 
             {/* Main Content */}
             <main className="flex flex-col items-center justify-center flex-grow p-6">
-                <div className="bg-gradient-to-br from-gray-500 to-gray-700 bg-opacity-90 shadow-lg rounded-lg p-8 max-w-lg w-full space-y-6">
+                <div className="bg-gradient-to-br from-gray-500 to-gray-700 bg-opacity-90 shadow-2xl shadow-gray-700 rounded-lg p-8 max-w-lg w-full space-y-6">
                     <h2 className="text-2xl font-bold text-center mb-4">
                         Generate Your Map
                     </h2>
@@ -100,6 +102,7 @@ export default function GeneratePage() {
                     </form>
                 </div>
             </main>
+            <Footer />
         </div>
     );
 }
